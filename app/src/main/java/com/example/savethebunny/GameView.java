@@ -10,7 +10,9 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
@@ -47,11 +49,17 @@ public class GameView extends View {
         super(context);
         this.context = context;
         background = BitmapFactory.decodeResource(getResources(), R.drawable.background);
+        if (background == null) Log.e("GameView","background resource missing!");
+
         ground = BitmapFactory.decodeResource(getResources(), R.drawable.ground);
+        if (ground == null) Log.e("GameView","ground resource missing!");
+
         rabbit = BitmapFactory.decodeResource(getResources(), R.drawable.bunny);
+        if (rabbit == null) Log.e("GameView","bunny resource missing!");
+
         Display display = ((Activity) getContext()).getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
+            Point size = new Point();
+            display.getSize(size);
         dWidth = size.x;
         dHeight = size.y;
         recBackground = new Rect(0, 0, dWidth, dHeight);
@@ -67,8 +75,8 @@ public class GameView extends View {
         textPaint.setColor(Color.rgb(255, 165, 0));
         textPaint.setTextSize(TEXT_SIZE);
         textPaint.setTextAlign(Paint.Align.LEFT);
-      // textPaint.setTypeface(ResourcesCompat.getFont(context, R.font.kenney_bloks));
-      healthPaint.setColor(Color.GREEN);
+        textPaint.setTypeface(Typeface.MONOSPACE); // Use built-in monospace font
+        healthPaint.setColor(Color.GREEN);
         random = new Random();
         rabbitX = dWidth / 2 - rabbit.getWidth() / 2;
         rabbitY = dHeight - ground.getHeight() - rabbit.getHeight();
