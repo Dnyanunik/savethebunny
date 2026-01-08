@@ -61,19 +61,54 @@ Smooth gameplay with basic animations
 
 SaveTheBunny/
 │
-├── app/
-│   ├── java/
-│   │   └── com.example.savethebunny/
-│   │       ├── MainActivity.java
-│   │       ├── GameActivity.java
-│   │       └── GameLogic.java
-│   │
-│   ├── res/
-│   │   ├── layout/
-│   │   ├── drawable/
-│   │   └── values/
+├── .gitignore
+├── README.md
+├── build.gradle
+├── settings.gradle
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
 │
-└── README.md
+├── gradle/
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+│
+├── app/
+│   ├── build.gradle
+│   ├── proguard-rules.pro
+│   │
+│   └── src/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   │
+│       │   ├── java/
+│       │   │   └── com/
+│       │   │       └── example/
+│       │   │           └── savethebunny/
+│       │   │               ├── MainActivity.java
+│       │   │               ├── GameActivity.java
+│       │   │               └── GameLogic.java
+│       │
+│       │   ├── res/
+│       │   │   ├── layout/
+│       │   │   │   ├── activity_main.xml
+│       │   │   │   └── activity_game.xml
+│       │   │   │
+│       │   │   ├── drawable/
+│       │   │   ├── mipmap/
+│       │   │   └── values/
+│       │   │       ├── colors.xml
+│       │   │       ├── strings.xml
+│       │   │       └── themes.xml
+│       │
+│       │   └── assets/
+│       │
+│       ├── test/
+│       │   └── java/
+│       │
+│       └── androidTest/
+│           └── java/
 
 
 ---
