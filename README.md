@@ -34,8 +34,20 @@ UI Design: XML
 Platform: Android
 
 Minimum SDK: As per project configuration
+---
+## Save the Bunny Game Screenshots
 
-
+<table>
+  <tr>
+    <td><img src="image/welcomePage.jpeg" width="250"></td>
+    <td><img src="image/HomePage.jpeg" width="250"></td>
+    
+  </tr>
+  <tr>
+    <td><img src="image/welcomePage2.jpeg" width="250"></td>
+    <td><img src="image/ExitPage.jpeg" width="250"></td>
+  </tr>
+</table>
 
 ---
 
